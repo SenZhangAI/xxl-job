@@ -86,6 +86,7 @@ public class XxlJobFileAppender {
 	 * @param logFileName
 	 * @param appendLog
 	 */
+	//note 增量写入日志，每次写入换行
 	public static void appendLog(String logFileName, String appendLog) {
 
 		// log file
@@ -108,7 +109,7 @@ public class XxlJobFileAppender {
 			appendLog = "";
 		}
 		appendLog += "\r\n";
-		
+
 		// append file content
 		FileOutputStream fos = null;
 		try {
@@ -126,7 +127,6 @@ public class XxlJobFileAppender {
 				}
 			}
 		}
-		
 	}
 
 	/**
